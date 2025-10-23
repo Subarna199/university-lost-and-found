@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card">
+  <h2>Welcome</h2>
+  <p class="small">Report or search for lost and found items on campus.</p>
+</div>
+
+<div class="card">
+  <h3>Recent Lost Items</h3>
+  {% if recent_lost %}
+    <ul>
+    {% for it in recent_lost %}
+      <li><strong>{{it.item}}</strong> — {{it.location}} <span class="small">({{it.status}})</span></li>
+    {% endfor %}
+    </ul>
+  {% else %}
+    <p class="small">No recent lost items.</p>
+  {% endif %}
+</div>
+
+<div class="card">
+  <h3>Recent Found Items</h3>
+  {% if recent_found %}
+    <ul>
+    {% for it in recent_found %}
+      <li><strong>{{it.item}}</strong> — {{it.location}} <span class="small">({{it.status}})</span></li>
+    {% endfor %}
+    </ul>
+  {% else %}
+    <p class="small">No recent found items.</p>
+  {% endif %}
+</div>
+{% endblock %}

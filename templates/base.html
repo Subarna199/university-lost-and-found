@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>University Lost & Found</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <style>
+      body { font-family: Arial, Helvetica, sans-serif; margin: 1.5rem; background: #f7f7f7; }
+      header { margin-bottom: 1rem; }
+      .card { background: white; padding: 1rem; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); margin-bottom: 1rem; }
+      nav a { margin-right: 1rem; text-decoration: none; color: #1a73e8; }
+      form > div { margin-bottom: 0.75rem; }
+      label { display:block; font-weight:600; margin-bottom:0.25rem; }
+      input[type=text], textarea, select { width: 100%; padding: 0.5rem; border: 1px solid #ddd; border-radius:4px; }
+      .flash { padding: 0.5rem 0.75rem; border-radius:4px; margin-bottom:0.75rem; }
+      .flash.success { background:#e6ffed; border:1px solid #b7f0c6; }
+      .flash.error { background:#ffecec; border:1px solid #f1b7b7; }
+      table { width:100%; border-collapse:collapse; }
+      th, td { padding:0.5rem; border-bottom:1px solid #eee; text-align:left; }
+      .small { font-size:0.9rem; color:#555; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>University Lost & Found</h1>
+      <nav>
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('report') }}">Report</a>
+        <a href="{{ url_for('search') }}">Search</a>
+        <a href="{{ url_for('admin') }}">Admin</a>
+      </nav>
+    </header>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, msg in messages %}
+          <div class="flash {{ category }}">{{ msg }}</div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+
+    <main>
+      {% block content %}{% endblock %}
+    </main>
+
+    <footer class="small" style="margin-top:1.5rem;">
+      Program Developed By Shrestha — Prototype for university use.
+    </footer>
+  </body>
+</html>

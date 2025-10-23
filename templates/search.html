@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card">
+  <h2>Search Items</h2>
+  <form method="post">
+    <div>
+      <label for="query">Search keyword (name, location, description)</label>
+      <input type="text" name="query" id="query" value="{{query}}" />
+    </div>
+    <div>
+      <button type="submit">Search</button>
+    </div>
+  </form>
+</div>
+
+<div class="card">
+  <h3>Results</h3>
+  <h4>Lost</h4>
+  {% if results.lost %}
+    <table>
+      <tr><th>Item</th><th>Location</th><th>Status</th><th>Contact</th></tr>
+      {% for e in results.lost %}
+      <tr>
+        <td>{{e.item}}</td><td>{{e.location}}</td><td>{{e.status}}</td><td>{{e.contact}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  {% else %}
+    <p class="small">No lost items match your query.</p>
+  {% endif %}
+
+  <h4>Found</h4>
+  {% if results.found %}
+    <table>
+      <tr><th>Item</th><th>Location</th><th>Status</th><th>Contact</th></tr>
+      {% for e in results.found %}
+      <tr>
+        <td>{{e.item}}</td><td>{{e.location}}</td><td>{{e.status}}</td><td>{{e.contact}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  {% else %}
+    <p class="small">No found items match your query.</p>
+  {% endif %}
+</div>
+{% endblock %}

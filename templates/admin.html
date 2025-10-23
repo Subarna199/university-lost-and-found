@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card">
+  <h2>Admin — Manage Reports</h2>
+
+  <h3>Found items</h3>
+  {% if data.found %}
+    <table>
+      <tr><th>Item</th><th>Location</th><th>Status</th><th>Actions</th></tr>
+      {% for e in data.found %}
+      <tr>
+        <td>{{e.item}}</td><td>{{e.location}}</td><td>{{e.status}}</td>
+        <td>
+          <form method="post" style="display:inline">
+            <input type="hidden" name="id" value="{{e.id}}">
+            <input type="hidden" name="kind" value="found">
+            <button name="action" value="mark_returned">Mark Returned</button>
+          </form>
+          <form method="post" style="display:inline">
+            <input type="hidden" name="id" value="{{e.id}}">
+            <input type="hidden" name="kind" value="found">
+            <button name="action" value="delete">Delete</button>
+          </form>
+        </td>
+      </tr>
+      {% endfor %}
+    </table>
+  {% else %}
+    <p class="small">No found items.</p>
+  {% endif %}
+
+  <h3>Lost items</h3>
+  {% if data.lost %}
+    <table>
+      <tr><th>Item</th><th>Location</th><th>Status</th><th>Actions</th></tr>
+      {% for e in data.lost %}
+      <tr>
+        <td>{{e.item}}</td><td>{{e.location}}</td><td>{{e.status}}</td>
+        <td>
+          <form method="post" style="display:inline">
+            <input type="hidden" name="id" value="{{e.id}}">
+            <input type="hidden" name="kind" value="lost">
+            <button name="action" value="mark_returned">Mark Returned</button>
+          </form>
+          <form method="post" style="display:inline">
+            <input type="hidden" name="id" value="{{e.id}}">
+            <input type="hidden" name="kind" value="lost">
+            <button name="action" value="delete">Delete</button>
+          </form>
+        </td>
+      </tr>
+      {% endfor %}
+    </table>
+  {% else %}
+    <p class="small">No lost items.</p>
+  {% endif %}
+</div>
+{% endblock %}

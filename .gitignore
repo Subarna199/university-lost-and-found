@@ -1,0 +1,5 @@
+venv/
+__pycache__/
+data/lost_found.json
+*.pyc
+.env
