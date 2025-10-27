@@ -147,10 +147,4 @@ This repository contains a project plan, the Flask app code, and templates ready
 - Email notifications when matches are found.
 - Photo uploads for item verification.
 - Migrate to PostgreSQL or another RDBMS for concurrency and scale.
-
-   ### 10. Future Extensions
-   - User authentication (student/staff accounts).
-   - Email notifications when matches are found.
-   - Photo uploads for item verification.
-   - Migrate to PostgreSQL or another RDBMS for concurrency and scale.
-
+ 
