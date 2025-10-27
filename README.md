@@ -100,12 +100,12 @@ This repository contains a project plan, the Flask app code, and templates ready
   - Easy to use (simple forms and clear messages).
   - Lightweight: runs on a single host without heavy dependencies.
   - Data persistence: local JSON storage for prototype; easily replaceable with a DB later.
-=======
+
    ### 4. Change in Operating Model
    - Centralized digital logs reduce phone/email-based coordination.
    - Staff can use the admin view to reconcile items during daily operations.
    - Students use the same familiar web interface anywhere on campus.
->>>>>>> 116b0e2 (Fix README rendering: remove accidental code fences)
+
 
    ### 5. Use Situations
    - Student reports a lost student ID after class.
@@ -136,7 +136,6 @@ This repository contains a project plan, the Flask app code, and templates ready
    3. Staff use the Admin page to mark items as returned.
    4. Data stored in `data/lost_found.json` for later analysis or migration to a DB.
 
-<<<<<<< HEAD
 ### 9. How the Program Should be Used
 1. Run the Flask app locally or on a small server.
 2. Users visit the index page to report or search for items.
@@ -148,10 +147,10 @@ This repository contains a project plan, the Flask app code, and templates ready
 - Email notifications when matches are found.
 - Photo uploads for item verification.
 - Migrate to PostgreSQL or another RDBMS for concurrency and scale.
-=======
+
    ### 10. Future Extensions
    - User authentication (student/staff accounts).
    - Email notifications when matches are found.
    - Photo uploads for item verification.
    - Migrate to PostgreSQL or another RDBMS for concurrency and scale.
->>>>>>> 116b0e2 (Fix README rendering: remove accidental code fences)
+
