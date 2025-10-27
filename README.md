@@ -90,7 +90,7 @@ This repository contains a project plan, the Flask app code, and templates ready
       - Lightweight: runs on a single host without heavy dependencies.
       - Data persistence: local JSON storage for prototype; easily replaceable with a DB later.
 
-<<<<<<< HEAD
+
 ### 3. Requirements on the Program
 - Functional:
   - Submit "lost" and "found" reports with item name, date, location, description, contact info.
