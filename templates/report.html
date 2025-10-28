@@ -1,34 +1,40 @@
 {% extends "base.html" %}
+
 {% block content %}
-<div class="card">
-  <h2>Report Lost or Found Item</h2>
-  <form method="post">
-    <div>
-      <label for="kind">Type</label>
-      <select name="kind" id="kind">
-        <option value="lost">Lost</option>
-        <option value="found">Found</option>
-      </select>
-    </div>
-    <div>
-      <label for="item">Item name</label>
-      <input type="text" name="item" id="item" required />
-    </div>
-    <div>
-      <label for="location">Location (where)</label>
-      <input type="text" name="location" id="location" required />
-    </div>
-    <div>
-      <label for="contact">Contact info (optional)</label>
-      <input type="text" name="contact" id="contact" />
-    </div>
-    <div>
-      <label for="description">Description (optional)</label>
-      <textarea name="description" id="description" rows="3"></textarea>
-    </div>
-    <div>
-      <button type="submit">Submit report</button>
-    </div>
-  </form>
-</div>
+  <div class="card">
+    <h2>Report Lost or Found Item</h2>
+    <form method="post">
+      <div class="form-group">
+        <label for="kind">Type</label>
+        <select name="kind" id="kind" required>
+          <option value="lost">Lost</option>
+          <option value="found">Found</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="item">Item Name</label>
+        <input type="text" name="item" id="item" placeholder="e.g., Wallet, Phone" required />
+      </div>
+
+      <div class="form-group">
+        <label for="location">Location (Where)</label>
+        <input type="text" name="location" id="location" placeholder="e.g., Library, Cafeteria" required />
+      </div>
+
+      <div class="form-group">
+        <label for="contact">Contact Info (Optional)</label>
+        <input type="text" name="contact" id="contact" placeholder="e.g., Email or Phone" />
+      </div>
+
+      <div class="form-group">
+        <label for="description">Description (Optional)</label>
+        <textarea name="description" id="description" rows="3" placeholder="Add any extra details..."></textarea>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit">Submit Report</button>
+      </div>
+    </form>
+  </div>
 {% endblock %}
