@@ -136,12 +136,7 @@ This repository contains a project plan, the Flask app code, and templates ready
    3. Staff use the Admin page to mark items as returned.
    4. Data stored in `data/lost_found.json` for later analysis or migration to a DB.
 
-### 9. How the Program Should be Used
-1. Run the Flask app locally or on a small server.
-2. Users visit the index page to report or search for items.
-3. Staff use the Admin page to mark items as returned.
-4. Data stored in `data/lost_found.json` for later analysis or migration to a DB.
-
+ 
 ### 10. Future Extensions
 - User authentication (student/staff accounts).
 - Email notifications when matches are found.
