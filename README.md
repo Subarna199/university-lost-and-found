@@ -49,7 +49,7 @@ This repository contains a project plan, the Flask app code, and templates ready
    ├── .gitignore
    ├── code/
    │   └── app.py
-   ├── templates/
+   |   ├── templates/
    │   ├── base.html
    │   ├── index.html
    │   ├── report.html
